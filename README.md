@@ -92,7 +92,7 @@ Make data more credible, we extract three times for each segment. The Time Consu
 
 The data shows that the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size.
 
-If our work has any inspiration for your research, please cite this our paper:
+If our work has any inspiration for your research, please cite our paper:
 
 <pre>
     The paper is undergoing review
