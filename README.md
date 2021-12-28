@@ -19,7 +19,7 @@ input:
 Seed point, probability density of road center  
 Step 1: Initialize the distance field U and cost matrix C;  
 Step 2: Scan U and C iteratively according to Gauss-Seidel; update U according to formula (10) in the paper during scanning;
-Step 3: Let Path=[xe], x=xs;  
+Step 3: Let Path=[xe], x=xs where xs is the start seed and the xe is the end seeds;  
 Step 4: Let U(x’) be the smallest distance in the 8 areas of x, add x’ to Path, let x=x’;
 Step 5: If x=xs, go to output, otherwise go to step 4.  
 Output:  
@@ -30,6 +30,8 @@ Path
 #### Extract demo
 The videos show the procedure of some test cases.  
 coming soon  
+
+The demonstrations show that we do not need to sed any hyperparameter to run our algorithm.
 #### Extraction results
 We post some test cases here to demonstrate the effective of our method.  
 <p>
@@ -77,15 +79,12 @@ We Extract three road centerlines of different lengths. As shown in below, the t
 <p>
     <img src='images/Fig8-c.png?raw=true' />
 </p>  
-We extract three times for each segment. The Time Consuming are shown below  
+To make the data more scientific, we extract three times for each segment. The Time Consuming are shown as below  
 
 |segment|1st|2nd|3th|Avg.|
-| :---| :---: | :---: | :---: | :---: |
+|:--- | :---: | :---: | :---: | :---: |
 |AB	|0.1875	|0.1865	|0.1826	|0.1855| 
 |AC	|0.2115	|0.2074	|0.2085	|0.2091|
 |AD	|0.2245	|0.2254	|0.2264	|0.2254|
 
-| Left-aligned | Center-aligned | Right-aligned |
-| :---         |     :---:      |          ---: |
-| git status   | git status     | git status    |
-| git diff     | git diff       | git diff      |
+These data shows that the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size.
