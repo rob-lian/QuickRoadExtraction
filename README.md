@@ -3,7 +3,7 @@
 Quickly extracting road networks from high-resolution remote sensing images is crucial in mapping, urban planning, and GIS databases updating. Semi-automatic road extraction, as the main method of road surveying and mapping, is a labor-intensive task. In order to reduce the cost of manual intervention and improve work efficiency, this paper proposes a fast road centerline extraction algorithm that combines an adaptive circular template and geodesic distance. First, the best circular templates are automatically estimated using the improved morphological gradient map, and the artificial seeds are adjusted to road center at the same time, and then the road saliency map is calculated according to the local color features inside the templates. After that, the soft road center probability density is estimated that is used to compute the geodesic lines. the geodesic lines between the continues seeds are extracted using fast sweep scan followed by the curve smoothing using mean filter and finally obtain the smooth road center lines. Extensive experiments and quantitative comparisons show that the proposed algorithm can greatly reduce manual intervention without losing much accuracy, and significantly improve the efficiency of road extraction. Moreover, the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size, and no hyperparameters need to be set. The algorithm behaves good experience in human-computer interaction.
 
 ### Dataset
-We use Google Earth(http://www.escience.cn/people/guangliangcheng/Datasets.html) to evaluation the performance of our method.
+We use [Google Earth](http://www.escience.cn/people/guangliangcheng/Datasets.html) to evaluation the performance of our method.
 ### Method
 #### Adaptive circle generation
 
@@ -85,3 +85,7 @@ We extract three times for each segment. The Time Consuming are shown below
 |AC	|0.2115	|0.2074	|0.2085	|0.2091|
 |AD	|0.2245	|0.2254	|0.2264	|0.2254|
 
+| Left-aligned | Center-aligned | Right-aligned |
+| :---         |     :---:      |          ---: |
+| git status   | git status     | git status    |
+| git diff     | git diff       | git diff      |
