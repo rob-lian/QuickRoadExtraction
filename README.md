@@ -4,7 +4,10 @@ Quickly extracting road networks from high-resolution remote sensing images is c
 
 ### Dataset
 We use [Google Earth](http://www.escience.cn/people/guangliangcheng/Datasets.html) to evaluation the performance of our method.
+
+<!--
 ### Method
+
 #### Adaptive circle generation
 
 Step 1: Take the seed point as the center O of the current best circular template, and set the radius r to 1;  
@@ -24,7 +27,7 @@ Step 4: Let U(x’) be the smallest distance in the 8 areas of x, add x’ to Pa
 Step 5: If x=xs, go to output, otherwise go to step 4.  
 Output:  
 Path  
-
+-->
 ### Experiment results
 
 #### Extract demo
@@ -73,7 +76,7 @@ We post some test cases here to demonstrate the effective of our method.
 *Average response delay (Delay): Which reflects the sensitivity of the algorithm. The smaller of this indicator means the better.  
 *Total time (Time): The total time from the start of the extraction to the end of the extraction, including the time consumption of algorithm, undo and redo, human-computer interaction, etc., which reflects the overall efficiency of the method  
 -->
-### Times Consuming
+### Times Consuming  
 The experimental operating environment is a 4-core 1.8GHz i7 processor, a notebook with 16G memory, the implementation language is Python3.7, and the iteration part of the three algorithms is accelerated by numba  
 We Extract three road centerlines of different lengths. As shown in below, the three road sections are AB, AC, and AD, and the road lengths are about 480 meters, 990 meters, and 1310 meters, respectively.
 <p>
