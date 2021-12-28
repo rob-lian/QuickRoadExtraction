@@ -58,7 +58,7 @@ We post some test cases here to demonstrate the effective of our method.
     <img src='images/image155.jpg?raw=true' />
 </p>
 <p>
-    <img src='images/image173.png?raw=true' />
+    <img src='images/image173.jpg?raw=true' />
 </p>
 <!--
 ### Performance
