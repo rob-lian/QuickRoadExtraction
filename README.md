@@ -78,9 +78,9 @@ We Extract three road centerlines of different lengths. As shown in below, the t
     <img src='images/Fig8-c.png?raw=true' />
 </p>  
 We extract three times for each segment. The Time Consuming are shown below  
-  
+
 |segment|1st|2nd|3th|Avg.|
-| :-----| :----: | :----: | :----: |
+| :---| :---: | :---: | :---: | :---: |
 |AB	|0.1875	|0.1865	|0.1826	|0.1855| 
 |AC	|0.2115	|0.2074	|0.2085	|0.2091|
 |AD	|0.2245	|0.2254	|0.2264	|0.2254|
