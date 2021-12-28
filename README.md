@@ -79,7 +79,7 @@ We Extract three road centerlines of different lengths. As shown in below, the t
 <p>
     <img src='images/Fig8-c.png?raw=true' />
 </p>  
-To make the data more scientific, we extract three times for each segment. The Time Consuming are shown as below  
+Make data more credible, we extract three times for each segment. The Time Consuming are shown as below  
 
 |segment|1st|2nd|3th|Avg.|
 |:--- | :---: | :---: | :---: | :---: |
@@ -87,4 +87,4 @@ To make the data more scientific, we extract three times for each segment. The T
 |AC	|0.2115	|0.2074	|0.2085	|0.2091|
 |AD	|0.2245	|0.2254	|0.2264	|0.2254|
 
-These data shows that the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size.
+The data shows that the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size.
