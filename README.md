@@ -1,8 +1,8 @@
 # A Quick Road Centerline Extraction Method from High-resolution Remote Sensing
-###Abastract 
+### Abastract 
 Quickly extracting road networks from high-resolution remote sensing images is crucial in mapping, urban planning, and GIS databases updating. Semi-automatic road extraction, as the main method of road surveying and mapping, is a labor-intensive task. In order to reduce the cost of manual intervention and improve work efficiency, this paper proposes a fast road centerline extraction algorithm that combines an adaptive circular template and geodesic distance. First, the best circular templates are automatically estimated using the improved morphological gradient map, and the artificial seeds are adjusted to road center at the same time, and then the road saliency map is calculated according to the local color features inside the templates. After that, the soft road center probability density is estimated that is used to compute the geodesic lines. the geodesic lines between the continues seeds are extracted using fast sweep scan followed by the curve smoothing using mean filter and finally obtain the smooth road center lines. Extensive experiments and quantitative comparisons show that the proposed algorithm can greatly reduce manual intervention without losing much accuracy, and significantly improve the efficiency of road extraction. Moreover, the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size, and no hyperparameters need to be set. The algorithm behaves good experience in human-computer interaction.
 
-###Method
+### Method
 #### Adaptive circle generation
 
 Step 1: Take the seed point as the center O of the current best circular template, and set the radius r to 1;  
@@ -31,36 +31,34 @@ coming soon
 #### Extraction results
 We post some test cases here to demonstrate the effective of our method.  
 <p>
-    <img src='images/tracking1.jpg?raw=true' />
+    <img src='images/image1.jpg?raw=true' />
 </p>
 <p>
-    <img src='images/tracking8.png?raw=true' />
+    <img src='images/image8.png?raw=true' />
 </p>
 <p>
-    <img src='images/tracking11.png?raw=true' />
+    <img src='images/image11.png?raw=true' />
 </p>
 <p>
-    <img src='images/tracking13.png?raw=true' />
+    <img src='images/image13.png?raw=true' />
 </p>
 <p>
-    <img src='images/tracking20.png?raw=true' />
+    <img src='images/image20.png?raw=true' />
 </p>
 <p>
-    <img src='images/tracking34.png?raw=true' />
-</p><p>
-    <img src='images/tracking92.png?raw=true' />
+    <img src='images/image34.png?raw=true' />
 </p>
 <p>
-    <img src='images/tracking141.png?raw=true' />
+    <img src='images/image92.png?raw=true' />
 </p>
 <p>
-    <img src='images/tracking8.png?raw=true' />
+    <img src='images/image141.png?raw=true' />
 </p>
 <p>
-    <img src='images/tracking155.jpg?raw=true' />
+    <img src='images/image155.jpg?raw=true' />
 </p>
 <p>
-    <img src='images/tracking173.png?raw=true' />
+    <img src='images/image173.png?raw=true' />
 </p>
 <!--
 ### Performance
