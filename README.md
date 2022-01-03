@@ -32,16 +32,11 @@ Path
 
 #### Extract demo
 The videos show the procedure of some test cases.  
-<h5>Demo1</h5>
-<video controls>
-    <source src="videos/demo1.mp4?raw=true" type="video/mp4">    
-    您的浏览器不支持 video 标签。
-</video>
-<h5>Demo2</h5>
-<video controls>
-    <source src="videos/demo1.mp4?raw=true" type="video/mp4">    
-    您的浏览器不支持 video 标签。
-</video>
+<a href='videos/demo1.mp4?raw=true'/>Video 1. A tracking process on a image1 (612KB).(click here)</a>
+<br />
+<br />
+<a href='videos/demo2.mp4?raw=true'/>Video 2. A tracking process on a image2 (464KB).(click here)</a>
+
 The demonstrations show that we do not need to sed any hyperparameter to run our algorithm.
 #### Extraction results
 We post some test cases here to demonstrate the effective of our method.  
