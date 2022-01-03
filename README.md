@@ -37,7 +37,7 @@ The videos show the procedure of some test cases.
 <br />
 <a href='videos/demo2.mp4?raw=true'/>Video 2. A tracking process on a image2 (464KB).(click here)</a>
 
-The demonstrations show that we do not need to sed any hyperparameter to run our algorithm.
+The demonstrations also show that we do not need to set any hyperparameter to run our algorithm.
 #### Extraction results
 We post some test cases here to demonstrate the effective of our method.  
 <p>
