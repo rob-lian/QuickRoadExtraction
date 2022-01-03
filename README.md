@@ -32,8 +32,16 @@ Path
 
 #### Extract demo
 The videos show the procedure of some test cases.  
-coming soon  
-
+<h5>Demo1</h5>
+<video controls>
+    <source src="videos/demo1.mp4?raw=true" type="video/mp4">    
+    您的浏览器不支持 video 标签。
+</video>
+<h5>Demo2</h5>
+<video controls>
+    <source src="videos/demo1.mp4?raw=true" type="video/mp4">    
+    您的浏览器不支持 video 标签。
+</video>
 The demonstrations show that we do not need to sed any hyperparameter to run our algorithm.
 #### Extraction results
 We post some test cases here to demonstrate the effective of our method.  
@@ -76,7 +84,9 @@ We post some test cases here to demonstrate the effective of our method.
 *Average response delay (Delay): Which reflects the sensitivity of the algorithm. The smaller of this indicator means the better.  
 *Total time (Time): The total time from the start of the extraction to the end of the extraction, including the time consumption of algorithm, undo and redo, human-computer interaction, etc., which reflects the overall efficiency of the method  
 -->
-### Times Consuming  
+
+<h3> Times Consuming  </h3>
+
 The experimental operating environment is a 4-core 1.8GHz i7 processor, a notebook with 16G memory, the implementation language is Python3.7, and the iteration part of the three algorithms is accelerated by numba  
 We Extract three road centerlines of different lengths. As shown in below, the three road sections are AB, AC, and AD, and the road lengths are about 480 meters, 990 meters, and 1310 meters, respectively.
 <p>
