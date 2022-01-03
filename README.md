@@ -39,7 +39,7 @@ The videos show the procedure of some test cases.
 
 The demonstrations also show that we do not need to set any hyperparameter to run our algorithm.
 #### Extraction results
-We post some test cases here to demonstrate the effective of our method.  
+We post some test cases here to demonstrate the effective of our method. The yellow circles in the results are the automatic estimated circular templates. Each of them is estimated according to manual seed.
 <p>
     <img src='images/image1.jpg?raw=true' />
 </p>
