@@ -41,12 +41,6 @@ The demonstrations also show that we do not need to set any hyperparameter to ru
 #### Extraction results
 We post some test cases here to demonstrate the effective of our method. The yellow circles in the results are the automatic estimated circular templates. Each of them is estimated according to manual seed.
 <p>
-    <img src='images/image1.jpg?raw=true' />
-</p>
-<p>
-    <img src='images/image8.png?raw=true' />
-</p>
-<p>
     <img src='images/image11.png?raw=true' />
 </p>
 <p>
@@ -59,16 +53,7 @@ We post some test cases here to demonstrate the effective of our method. The yel
     <img src='images/image34.png?raw=true' />
 </p>
 <p>
-    <img src='images/image92.png?raw=true' />
-</p>
-<p>
-    <img src='images/image141.png?raw=true' />
-</p>
-<p>
     <img src='images/image155.jpg?raw=true' />
-</p>
-<p>
-    <img src='images/image173.jpg?raw=true' />
 </p>
 <!--
 ### Performance
