@@ -1,45 +1,24 @@
-# A Quick Road Centerline Extraction Method from High-resolution Remote Sensing
-### Abastract 
-Quickly extracting road networks from high-resolution remote sensing images is crucial in mapping, urban planning, and GIS databases updating. Semi-automatic road extraction, as the main method of road surveying and mapping, is a labor-intensive task. In order to reduce the cost of manual intervention and improve work efficiency, this paper proposes a fast road centerline extraction algorithm that combines an adaptive circular template and geodesic distance. First, the best circular templates are automatically estimated using the improved morphological gradient map, and the artificial seeds are adjusted to road center at the same time, and then the road saliency map is calculated according to the local color features inside the templates. After that, the soft road center probability density is estimated that is used to compute the geodesic lines. the geodesic lines between the continues seeds are extracted using fast sweep scan followed by the curve smoothing using mean filter and finally obtain the smooth road center lines. Extensive experiments and quantitative comparisons show that the proposed algorithm can greatly reduce manual intervention without losing much accuracy, and significantly improve the efficiency of road extraction. Moreover, the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size, and no hyperparameters need to be set. The algorithm behaves good experience in human-computer interaction.
+# 结合测地距离场与曲线平滑的遥感图像道路中心线快速提取
+### 摘要 
+从高分辨遥感图像中快速提取道路信息在地图绘制、城市规划和更新GIS数据库等方面至关重要，半自动道路提取作为道路测绘内业的主要方式，是一项劳动密集型工作。为了降低人工介入代价，提高工作效率，本文提出了一种基于测地距离场的道路中心线快速提取算法。首先利用最佳圆形模板算法，自动估计道路宽度的同时将人工种子调整到道路中心；为了定位道路中心线，提出基于道路显著图的柔性道路中心核密度估计算法，克服了传统道路中心核密度估计中道路分割阈值预设困难的问题；最重要的，本文提出快速生成测地距离场算法，可快速跟踪种子之间的测地线，大大提高了道路中心线提取的效率；最后对测地线坐标进行均值滤波平滑，获得了光滑的道路中心线。大量的实验和对比数据表明，本文算法能够在保证精度的前提下快速提取道路中心线，大幅降低人工介入代价，提高道路提取的工作效率；值得强调的是，本文算法在图像分辨率固定的前提下，提取任意长度道路中心线的耗时近乎相同，且无需设置超参数，具有很好的人机交互体验。
 
 ### Dataset
-We use [Google Earth](http://www.escience.cn/people/guangliangcheng/Datasets.html) to evaluation the performance of our method.
+我们使用 [Google Earth](http://www.escience.cn/people/guangliangcheng/Datasets.html) 来评估本文算法的效率.
 
-<!--
-### Method
 
-#### Adaptive circle generation
+### 实验结果
 
-Step 1: Take the seed point as the center O of the current best circular template, and set the radius r to 1;  
-Step 2: Generate nine circles with a radius of r by taking the Jiugong grid with O as the center as the center;  
-Step 3: Calculate the morphological gradient sum within the coverage of each circle, and set the minimum circle center of the gradient sum as O’ and the gradient sum as S;  
-Step 4: If S is greater than r, go to step 6, otherwise let O be equal to O’ and r be equal to r+1;  
-Step 5: If r is greater than the maximum template radius, go to step 6, otherwise, go to step 2;  
-Step 6: Output O and r  
-
-#### Quick extract road centerline  
-input:  
-Seed point, probability density of road center  
-Step 1: Initialize the distance field U and cost matrix C;  
-Step 2: Scan U and C iteratively according to Gauss-Seidel; update U according to formula (10) in the paper during scanning;
-Step 3: Let Path=[xe], x=xs where xs is the start seed and the xe is the end seeds;  
-Step 4: Let U(x’) be the smallest distance in the 8 areas of x, add x’ to Path, let x=x’;
-Step 5: If x=xs, go to output, otherwise go to step 4.  
-Output:  
-Path  
--->
-### Experiment results
-
-#### Extract demo
-The videos show the procedure of some test cases.  
-<a href='videos/demo1.mp4?raw=true'/>Video 1. A tracking process on a image1 (612KB).(click here)</a>
+#### 程序演示
+以下视频是两个实验案例的执行过程.  
+<a href='videos/demo1.mp4?raw=true'/>视频 1. 在image1上的道路提取过程 (612KB).(点击查看)</a>
 <br />
 <br />
-<a href='videos/demo2.mp4?raw=true'/>Video 2. A tracking process on a image2 (464KB).(click here)</a>
+<a href='videos/demo2.mp4?raw=true'/>视频 2. 在image2上的道路提取过程 (464KB).(点击查看)</a>
 
-The demonstrations also show that we do not need to set any hyperparameter to run our algorithm.
-#### Extraction results
-We post some test cases here to demonstrate the effective of our method. The yellow circles in the results are the automatic estimated circular templates. Each of them is estimated according to manual seed.
+从提取过程的演示可以看出，本文算法无需设置任何超参数.
+
+#### 提取结果
+以下展示几个比较复杂的情况，
 <p>
     <img src='images/image11.png?raw=true' />
 </p>
@@ -55,24 +34,16 @@ We post some test cases here to demonstrate the effective of our method. The yel
 <p>
     <img src='images/image155.jpg?raw=true' />
 </p>
-<!--
-### Performance
-*The extraction results show the superiority of the algorithm Visually. We can further show the performance using serval indics. The performances of road extraction methods are often measured by completion, accuracy, and quality, but semi-automatic algorithms can always improve these three indicators by increasing the degree of manual intervention. Therefore, we introduced other indicators as follows  
-*Completion (COM), Correct (CORR), Quality: COM=TP/(TP+FN), CORR=TP/(TP+FP), Quality=TP/(TP+FN+ FP)  
-*Seed Number(Seeds): Which reflects the number of manual interactions required by the algorithm.  
-*Segment Number(Segments): Which reflects the intelligence of the algorithm. The more segments, the shorter the distance between the seed points and the lower the intelligence of the algorithm.
-*Average response delay (Delay): Which reflects the sensitivity of the algorithm. The smaller of this indicator means the better.  
-*Total time (Time): The total time from the start of the extraction to the end of the extraction, including the time consumption of algorithm, undo and redo, human-computer interaction, etc., which reflects the overall efficiency of the method  
--->
 
-<h3> Times Consuming  </h3>
 
-The experimental operating environment is a 4-core 1.8GHz i7 processor, a notebook with 16G memory, the implementation language is Python3.7, and the iteration part of the three algorithms is accelerated by numba  
-We Extract three road centerlines of different lengths. As shown in below, the three road sections are AB, AC, and AD, and the road lengths are about 480 meters, 990 meters, and 1310 meters, respectively.
+<h3> 算法执行时间 </h3>
+
+实验操作环境为4核1.8GHz i7处理器，16G内存笔记本，实现语言为Python3.7，三种算法的迭代部分由numba加速
+我们提取三条不同长度的道路中心线。如下图所示，三个路段分别为AB、AC和AD，道路长度分别约为480米、990米和1310米。
 <p>
     <img src='images/Fig8-c.png?raw=true' />
 </p>  
-Make data more credible, we extract three times for each segment. The Time Consuming are shown as below  
+为了使数据更加可信，我们为每个片段提取三次。时间消耗如下所示
 
 |segment|1st|2nd|3th|Avg.|
 |:--- | :---: | :---: | :---: | :---: |
@@ -80,11 +51,11 @@ Make data more credible, we extract three times for each segment. The Time Consu
 |AC	|0.2115	|0.2074	|0.2085	|0.2091|
 |AD	|0.2245	|0.2254	|0.2264	|0.2254|
 
-The data shows that the proposed algorithm takes almost the same time to extract any length of road centerline given a fixed image size.
+数据表明，在给定固定图像大小的情况下，所提出的算法几乎需要相同的时间来提取任何长度的道路中心线。
 
-If our work has any inspiration for your research, please cite our paper:
+如果我们的工作对您的研究有任何启发，请引用我们的论文：
 
 <pre>
-    The paper is undergoing review
+    该论文正在审稿中
 
 </pre>
